@@ -1,0 +1,35 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: notification-service
+
+  kafka:
+    consumer:
+      group-id: restaurant-service
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      properties:
+        spring.deserializer.value.delegate.class: org.springframework.kafka.support.serializer.JsonDeserializer
+        spring.json.value.default.type: com.company.ms.kafka.RestaurantEvent
+        spring.json.trusted.packages: "*"
+        spring.json.add.type.headers: false
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: numune@gmail.com    # <-- burada göndərən gmail (rəqəmsal app-password ilə)
+    password: google password api     # <-- Gmail App Password (16 simvoldan ibarət)
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+notification:
+  email:
+    to: penahmohbalizade05@gmail.com            # <-- bildiriş gedəcək alıcının maili
+    subject: "Yeni Restoran yaradıldı"

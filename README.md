@@ -1,4 +1,4 @@
-# README — RestaurantEventConsumer
+# README — Notiification 
 
 Bu sənəd `RestaurantEventConsumer` içində e‑mail göndərmə funksiyasını necə istifadə etmək və `application.yml` faylında e‑mail məlumatlarını necə konfiqurasiya etmək barədə qısa və səliqəli təlimatdır.
 

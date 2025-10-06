@@ -1,6 +1,6 @@
 package com.example.ms.kafka;
 
-import com.example.ms.yoxlama.EmailService;
+import com.example.ms.service.EmailService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;

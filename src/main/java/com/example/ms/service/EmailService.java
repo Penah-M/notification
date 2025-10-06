@@ -1,4 +1,4 @@
-package com.example.ms.yoxlama;
+package com.example.ms.service;
 
 
 import lombok.RequiredArgsConstructor;
